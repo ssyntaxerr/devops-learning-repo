@@ -1,5 +1,5 @@
 # DevOps-Learning-Repo 🤓
-This repository documents my journey from level 0-34 of the OverTheWire bandit challenges.
+This repository documents my DevOps learning journey.
 
 My takeaways and hardest challenges I faced are also included.
 
@@ -49,8 +49,41 @@ My takeaways and hardest challenges I faced are also included.
 
 ----------------------------------------------------------
 
-#### Takeaways 🥳
+### Takeaways 🥳
 1. **Simplicity is key** - Realizing that overcomplicating solutions often wastes time, and starting with simple commands often works best.
 2. **Manual** - Using man consistently helped me understand command options and flags, saving trial-and-error attempts. 
 3. **Step by step** - Breaking problems into smaller steps made even complex levels approachable and less intimidating.
+
+----------------------------------------------------------
+
+# Bash scripting 👾
+This module was a big step for me when it came to learning how to think like a DevOps engineer. I was pushed to understanding the why behind every action I made.
+
+These are the descriptions for the scripts I wrote for the bash scripting assignment and some key learnings:
+### Challenge 1:
+Prompts the user to enter two numbers
+Calculates addition, subtraction, multiplication for the numbers
+Checks if the second number is 0 before dividing (to prevent division by zero)
+Prints all results in a single line, with an error message for division if needed
+
+### Challenge 2: 
+Creates a directory called bash_demo (if it doesn’t exist)
+Creates a text file demo.txt inside it with some content
+Displays the content of demo.txt in the terminal
+
+### Challenge 3:
+Prompts the user for a filename
+Checks if the file exists
+Prints a message showing exactly which permissions (read, write, execute) the current user has on that file
+
+#Challenge 4:
+Prompts the user to enter a directory to back up
+Checks if the directory exists; if not, exits with an error
+Creates a backup directory with _backup_<timestamp> appended
+Copies all files and subdirectories into the backup
+Counts and prints how many files were backed up
+
+## Key learnings 🔑
+Working on these Bash scripts gave me hands-on experience automating tasks, handling user input, and managing files and directories efficiently. I gained confidence in writing reliable, structured scripts that can adapt to different situations, and I now appreciate how essential scripting skills are for a DevOps engineer in streamlining workflows, automating repetitive tasks, and maintaining systems effectively.
+
 

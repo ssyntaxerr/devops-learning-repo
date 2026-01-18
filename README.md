@@ -59,7 +59,7 @@ My takeaways and hardest challenges I faced are also included.
 # Bash scripting 👾
 This module was a big step for me when it came to learning how to think like a DevOps engineer. I was pushed to understanding the why behind every action I made.
 
-These are the descriptions for the scripts I wrote for the bash scripting assignment and some key learnings:
+These are the descriptions for the scripts I wrote for the bash scripting assignment and some key learnings (all scripts can be found in the bash-scripting folder):
 ### Challenge 1:
 Prompts the user to enter two numbers
 Calculates addition, subtraction, multiplication for the numbers

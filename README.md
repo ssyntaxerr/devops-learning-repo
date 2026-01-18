@@ -1,0 +1,56 @@
+# DevOps-Learning-Repo 🤓
+This repository documents my journey from level 0-34 of the OverTheWire bandit challenges.
+
+My takeaways and hardest challenges I faced are also included.
+
+----------------------------------------------------------
+
+## OverTheWire Bandit — Breakdown 🧐
+
+| Level | Challenge | Solution (Command) |
+|------:|----------|--------------------|
+| 0 | Connect to the Bandit server | `ssh bandit0@bandit.labs.overthewire.org -p 2220` |
+| 0 → 1 | Read a file in the home directory | `cat readme` |
+| 1 → 2 | Read a file starting with a dash | `cat -- -filename` |
+| 2 → 3 | Read a file with spaces in the name | `cat "file name with spaces"` |
+| 3 → 4 | Find and read a hidden file | `ls -a` → `cat .hiddenfile` |
+| 4 → 5 | Identify the only human-readable file | `file *` → `cat <file>` |
+| 5 → 6 | Find a file by size and permissions | `find . -type f -size <size> -readable` |
+| 6 → 7 | Find a file by user and group | `find / -user <user> -group <group> 2>/dev/null` |
+| 7 → 8 | Search for a password in a file | `grep <keyword> data.txt` |
+| 8 → 9 | Find the unique line | `sort data.txt | uniq -u` |
+| 9 → 10 | Extract readable strings from binary | `strings data.txt` |
+| 10 → 11 | Decode base64 data | `base64 -d data.txt` |
+| 11 → 12 | Decode ROT13 text | `tr 'A-Za-z' 'N-ZA-Mn-za-m'` |
+| 12 → 13 | Extract multiple compressed files | `file data` → rename → decompress `xxd - r`  |
+| 13 → 14 | Login using an SSH private key | `chmod 600 key` → `ssh -i key bandit14@host -p 2220` |
+| 14 → 15 | Connect to a local TCP service | `nc localhost <port>` |
+| 15 → 16 | Connect to an SSL/TLS service | `openssl s_client -connect localhost:<port>` |
+| 16 → 17 | Find the SSL-enabled port | `nmap -p <range> localhost` |
+| 17 → 18 | Compare two files | `diff file1 file2` |
+| 18 → 19 | Bypass a shell that exits | `ssh user@host -p 2220 "cat <file>"` |
+| 19 → 20 | Exploit a setuid binary | `./setuid_binary` |
+| 20 → 21 | Communicate between processes | `nc -lvp <port>` |
+| 21 → 22 | Inspect cron jobs | `ls /etc/cron.d` |
+| 22 → 23 | Read and execute a script | `cat script.sh` |
+| 23 → 24 | Abuse insecure temp file handling | `mktemp` |
+| 24 → 25 | Brute-force numeric input | `for i in {0000..9999}; do echo $i; done | nc localhost <port>` |
+| 25 → 26 | Escape restricted shell | `v` → `:set shell=/bin/bash` → `:shell` |
+| 26 → 27 | Use allowed binaries creatively | `./binary` |
+| 27 → 31 | Extract info from Git repos | `git log`, `git branch -a`, `git tag` |
+| 31 → 33 | Escape restricted environments | `env`, `export`, `$0` |
+
+----------------------------------------------------------
+
+### Hardest challenges 🤯
+1. **Shifting mindset** - Shifting my mindset from copy-pasting solutions to understanding when and why a command is relevant to a level.
+2. **Getting stuck in** - Forcing myself to get hands-on and try things even without full understanding, instead of waiting for certainty.
+3. **New language** - Learning and becoming comfortable with new Linux syntax and command structures.
+
+----------------------------------------------------------
+
+#### Takeaways 🥳
+1. **Simplicity is key** - Realizing that overcomplicating solutions often wastes time, and starting with simple commands often works best.
+2. **Manual** - Using man consistently helped me understand command options and flags, saving trial-and-error attempts. 
+3. **Step by step** - Breaking problems into smaller steps made even complex levels approachable and less intimidating.
+

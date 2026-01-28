@@ -1,0 +1,65 @@
+Assignment: Deploy a web server on AWS EC2, configure NGINX to serve a webpage, and make the site accessible through a custom domain using DNS.
+
+
+1. Launch EC2 instance 
+- Launched an Ubuntu EC2 instance on AWS
+
+- Selected an appropriate instance type (free-tier eligible)
+
+- Created and downloaded an SSH key pair (.pem)
+
+- Configured the Security Group to allow:
+   SSH (port 22)
+   HTTP (port 80)
+
+2. Connected to the instance via SSH
+- Used Ubuntu (WSL) on Windows
+
+- Moved the key pair into a secure location and set correct permissions
+
+- Connected to the EC2 instance using SSH
+  ssh -i ~/.ssh/my-key.pem ubuntu@<PUBLIC_IPV4_ADDRESS>
+This provided secure remote access to the server.
+
+3. Installed and configured NGINX
+- Updated system packages
+  sudo apt update
+
+- Installed NGINX as the web server
+  sudo apt install nginx -y
+
+- Started and enabled the NGINX service
+  sudo systemct1 start nginx
+
+- Verified NGINX was running locally
+  curl http://localhost
+
+4. Verified public access
+- Accessed the site using the EC2 public IPv4 address
+  http://<PUBLIC_IPV4_ADDRESS>
+Confirmed the NGINX welcome page loaded successfully
+
+5. Configured DNS with Cloudflare
+- Purchased a custom domain via Cloudflare
+
+- Created DNS A records pointing the domain to the EC2 public IP
+  Type: A
+  Name: @
+  Value: EC2 Public IPv4
+  Proxy: DNS only
+Waited for DNS propagation
+
+6. Accessed the Site via Custom Domain
+- Verified the site loaded successfully
+  http://mydomainname.co.uk
+
+- This confirmed:
+  DNS resolution worked
+  The domain correctly mapped to the EC2 instance
+  NGINX served the page over the custom domain
+
+7. Verified DNS resolution
+- After creating the DNS A record, DNS resolution was verified using ping
+  ping mydomainname.co.uk
+
+

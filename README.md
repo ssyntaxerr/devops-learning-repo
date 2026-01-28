@@ -76,7 +76,7 @@ Prompts the user for a filename
 Checks if the file exists
 Prints a message showing exactly which permissions (read, write, execute) the current user has on that file
 
-#Challenge 4:
+### Challenge 4:
 Prompts the user to enter a directory to back up
 Checks if the directory exists; if not, exits with an error
 Creates a backup directory with _backup_<timestamp> appended
@@ -85,5 +85,22 @@ Counts and prints how many files were backed up
 
 ## Key learnings 🔑
 Working on these Bash scripts gave me hands-on experience automating tasks, handling user input, and managing files and directories efficiently. I gained confidence in writing reliable, structured scripts that can adapt to different situations, and I now appreciate how essential scripting skills are for a DevOps engineer in streamlining workflows, automating repetitive tasks, and maintaining systems effectively.
+
+----------------------------------------------------------
+
+# Networking 🌐
+This module helped me realize how integral networking is to working as a DevOps engineer. Modern systems rely heavily on networking concepts, and even simple deployments depend on many components working together correctly.
+
+One of the biggest lessons for me was realizing just how complex networking systems are, especially concepts like DNS and the OSI model. Learning how requests move through different layers and how services communicate across a network gave me a much clearer understanding of what actually happens behind the scenes when an application is accessed.
+
+Another major takeaway was the importance of troubleshooting. Misconfigurations such as using a private IP instead of a public IP, incorrect DNS records, or missing firewall rules can completely break connectivity. Learning how to methodically diagnose issues and verify each layer of the network was a key part of this project and is an essential skill in DevOps work.
+
+One of the most difficult aspects of this learning process was being introduced to many new terms at once. Networking involves a large amount of vocabulary, and understanding how these terms relate to each other takes time and repetition.
+
+I also found it challenging to understand where everything fits and what each component’s role is. Concepts such as IP addresses, DNS, subnetting, switches, routers, and WANs all interact with each other, and it was initially difficult to build a clear mental model of how data flows through these systems.
+
+Working through real configuration issues helped connect these concepts together. Seeing how DNS points to an IP address, how routing and subnetting control traffic flow, and how services are exposed through ports made the theory far easier to understand in practice.
+
+This module highlighted that networking knowledge is not optional in DevOps. A strong understanding of networking fundamentals makes it easier to deploy systems, diagnose failures, and reason about infrastructure behavior. While the learning curve was steep, working through these concepts hands on significantly strengthened my foundational understanding.
 
 
